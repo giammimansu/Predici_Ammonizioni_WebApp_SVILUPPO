@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predici Ammonizioni</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ammonizioni/styles.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Predici Ammonizioni</h1>
+        
+        <form method="post" id="prediction-form">
+            {% csrf_token %}
+            <label for="casa">Squadra di Casa:</label>
+            <select id="casa" name="casa" class="select2">
+                <option value="" disabled selected>Seleziona Squadra di Casa</option>
+                {% for squadra in squadre %}
+                    <option value="{{ squadra }}">{{ squadra }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="trasferta">Squadra Trasferta:</label>
+            <select id="trasferta" name="trasferta" class="select2">
+                <option value="" disabled selected>Seleziona Squadra Trasferta</option>
+                {% for squadra in squadre %}
+                    <option value="{{ squadra }}">{{ squadra }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="arbitro">Arbitro:</label>
+            <select id="arbitro" name="arbitro" class="select2">
+                <option value="" disabled selected>Seleziona Arbitro</option>
+                {% for arbitro in arbitri %}
+                    <option value="{{ arbitro }}">{{ arbitro }}</option>
+                {% endfor %}
+            </select>
+
+            <h2>Giocatori Casa</h2>
+            <select id="giocatori-casa" name="giocatori_casa" class="select2" multiple="multiple" style="width: 100%;">
+                {% for giocatore in giocatori_casa %}
+                    <option value="{{ giocatore }}">{{ giocatore }}</option>
+                {% endfor %}
+            </select>
+
+            <h2>Giocatori Trasferta</h2>
+            <select id="giocatori-trasferta" name="giocatori_trasferta" class="select2" multiple="multiple" style="width: 100%;">
+                {% for giocatore in giocatori_trasferta %}
+                    <option value="{{ giocatore }}">{{ giocatore }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit" id="predict">Predict</button>
+        </form>
+        
+        <div id="result">
+            {% if error_message %}
+                <div class="error">{{ error_message }}</div>
+            {% endif %}
+            {% if results %}
+                <h2>Prediction Results</h2>
+                <ul>
+                    {% for giocatore, probability in results %}
+                        <li>{{ giocatore }}: {{ probability }}%</li>
+                    {% endfor %}
+                </ul>
+                <button onclick="window.location.href='/'">Nuova Predizione</button>
+            {% endif %}
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
+
+            $('#casa, #trasferta').change(function() {
+                var casa = $('#casa').val();
+                var trasferta = $('#trasferta').val();
+
+                $.ajax({
+                    url: '{% url "get_players" %}',
+                    data: {
+                        'casa': casa,
+                        'trasferta': trasferta
+                    },
+                    success: function(data) {
+                        var giocatoriCasa = data.giocatori_casa;
+                        var giocatoriTrasferta = data.giocatori_trasferta;
+
+                        $('#giocatori-casa').empty();
+                        $('#giocatori-trasferta').empty();
+
+                        $.each(giocatoriCasa, function(index, giocatore) {
+                            $('#giocatori-casa').append('<option value="' + giocatore + '">' + giocatore + '</option>');
+                        });
+
+                        $.each(giocatoriTrasferta, function(index, giocatore) {
+                            $('#giocatori-trasferta').append('<option value="' + giocatore + '">' + giocatore + '</option>');
+                        });
+
+                        $('#giocatori-casa').trigger('change');
+                        $('#giocatori-trasferta').trigger('change');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

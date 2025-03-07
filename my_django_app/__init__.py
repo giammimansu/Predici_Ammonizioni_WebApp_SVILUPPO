@@ -1,0 +1,1 @@
+# The file my_django_app/__init__.py is intentionally left blank.
