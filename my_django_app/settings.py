@@ -7,7 +7,7 @@ SECRET_KEY = 'your-secret-key'
 
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
+ALLOWED_HOSTS =  os.getenv('ALLOWED_HOSTS', 'localhost').split(',')  +  ["127.0.0.1"]
 
 
 
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -93,3 +94,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Serve i file statici con Whitenoise
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
