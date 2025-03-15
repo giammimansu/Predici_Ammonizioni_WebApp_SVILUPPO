@@ -1,1 +1,347 @@
 Casa;Trasferta;Giocatore;Minuti Giocati;Goal;Assist;Tiri;Tiri in Porta;Cartellini Gialli;Cartellini Rossi;Tocchi;Blocchi;xG_giocatore
+Cagliari;Genoa;Roberto Piccoli;90;0;1;5;0;0;0;25;0;0.2
+Cagliari;Genoa;Florinel Coman;30;0;0;1;0;0;0;11;0;0.0
+Cagliari;Genoa;Tommaso Augello;60;0;0;0;0;0;0;47;2;0.0
+Cagliari;Genoa;Nadir Zortea;90;0;0;0;0;0;0;21;1;0.0
+Cagliari;Genoa;Nicolas Viola;60;1;0;1;1;0;0;36;0;0.3
+Cagliari;Genoa;Gianluca Gaetano;30;0;0;1;0;0;0;18;1;0.1
+Cagliari;Genoa;Alessandro Deiola;77;0;0;0;0;1;0;37;1;0.0
+Cagliari;Genoa;Michel Ndary Adopo;13;0;0;0;0;0;0;11;0;0.0
+Cagliari;Genoa;Antoine Makoumbou;60;0;0;0;0;0;0;28;2;0.0
+Cagliari;Genoa;Matteo Prati;30;0;0;1;0;0;0;22;1;0.0
+Cagliari;Genoa;Adam Obert;77;0;0;0;0;0;0;65;1;0.0
+Cagliari;Genoa;Leonardo Pavoletti;13;0;0;0;0;1;0;10;0;0.0
+Cagliari;Genoa;Sebastiano Luperto;90;0;0;0;0;0;0;48;1;0.0
+Cagliari;Genoa;Yerry Mina;90;0;0;0;0;0;0;64;1;0.0
+Cagliari;Genoa;Gabriele Zappa;90;0;0;0;0;0;0;53;0;0.0
+Cagliari;Genoa;Elia Caprile;90;0;0;0;0;0;0;39;0;0.0
+Cagliari;Genoa;Caleb Ekuban;51;0;1;1;0;0;0;16;0;0.2
+Cagliari;Genoa;Andrea Pinamonti;39;0;0;1;0;0;0;18;0;0.1
+Cagliari;Genoa;Maxwel Cornet;74;1;0;1;1;0;0;31;0;0.4
+Cagliari;Genoa;Ruslan Malinovskyi;16;0;0;0;0;0;0;5;0;0.0
+Cagliari;Genoa;Jeff Ekhator;65;0;0;0;0;0;0;26;1;0.0
+Cagliari;Genoa;Alan Matturro;25;0;0;0;0;0;0;6;0;0.0
+Cagliari;Genoa;Fabio Miretti;90;0;0;1;1;0;0;52;0;0.1
+Cagliari;Genoa;Milan Badelj;51;0;0;0;0;1;0;49;1;0.0
+Cagliari;Genoa;Patrizio Masini;39;0;0;0;0;1;0;27;1;0.0
+Cagliari;Genoa;Morten Frendrup;90;0;0;0;0;0;0;50;3;0.0
+Cagliari;Genoa;Aarón Martín;90;0;0;0;0;0;0;83;0;0.0
+Cagliari;Genoa;Johan Vásquez;90;0;0;2;0;0;0;63;2;0.0
+Cagliari;Genoa;Koni De Winter;90;0;0;2;0;0;0;83;2;0.1
+Cagliari;Genoa;Brooke Norton-Cuffy;45;0;0;0;0;0;0;14;1;0.0
+Cagliari;Genoa;Alessandro Zanoli;45;0;0;0;0;0;0;37;2;0.0
+Cagliari;Genoa;Nicola Leali;90;0;0;0;0;0;0;29;0;0.0
+Parma;Torino;Ange-Yoan Bonny;54;0;0;2;1;0;0;19;1;0.7
+Parma;Torino;Mateo Pellegrino;36;2;0;4;2;1;0;11;0;0.6
+Parma;Torino;Matteo Cancellieri;90;0;0;1;0;0;0;30;0;0.3
+Parma;Torino;Pontus Almqvist;75;0;0;1;0;0;0;20;3;0.1
+Parma;Torino;Dennis Man;15;0;0;1;0;0;0;13;0;0.0
+Parma;Torino;Simon Sohm;67;0;0;0;0;1;0;35;0;0.0
+Parma;Torino;Hernani;23;0;1;0;0;0;0;17;0;0.0
+Parma;Torino;Nahuel Estévez;54;0;0;0;0;0;0;28;0;0.0
+Parma;Torino;Mohamed Haj;36;0;0;0;0;0;0;14;0;0.0
+Parma;Torino;Mandela Keita;90;0;0;0;0;0;0;35;0;0.0
+Parma;Torino;Emanuele Valeri;90;0;1;2;0;0;0;56;0;0.0
+Parma;Torino;Lautaro Valenti;54;0;0;0;0;1;0;43;0;0.0
+Parma;Torino;Giovanni Leoni;36;0;0;0;0;0;0;23;0;0.0
+Parma;Torino;Alessandro Vogliacco;90;0;0;1;1;1;0;64;1;0.1
+Parma;Torino;Enrico Del Prato;90;0;0;0;0;0;0;68;1;0.0
+Parma;Torino;Zion Suzuki;90;0;0;0;0;0;0;23;0;0.0
+Parma;Torino;Che Adams;90;1;0;2;1;1;0;33;1;0.4
+Parma;Torino;Elif Elmas;68;1;0;2;1;0;0;23;0;0.1
+Parma;Torino;Yann Karamoh;22;0;0;0;0;0;0;9;0;0.0
+Parma;Torino;Valentino Lazaro;83;0;0;0;0;0;0;33;0;0.0
+Parma;Torino;Marcus Pedersen;7;0;0;0;0;0;0;5;1;0.0
+Parma;Torino;Nikola Vlašić;90;0;0;0;0;0;0;29;0;0.0
+Parma;Torino;Cesare Casadei;68;0;1;0;0;0;0;34;0;0.0
+Parma;Torino;Gvidas Gineitis;22;0;0;0;0;0;0;6;0;0.0
+Parma;Torino;Samuele Ricci;89;0;0;0;0;1;0;50;0;0.0
+Parma;Torino;Karol Linetty;1;0;0;0;0;0;0;2;0;0.0
+Parma;Torino;Cristiano Biraghi;90;0;0;2;0;0;0;52;0;0.3
+Parma;Torino;Saúl Coco;90;0;0;0;0;0;0;52;0;0.0
+Parma;Torino;Guillermo Maripán;90;0;1;0;0;0;0;54;2;0.0
+Parma;Torino;Sebastian Walukiewicz;90;0;0;0;0;0;0;43;1;0.0
+Parma;Torino;Vanja Milinković-Savić;90;0;0;0;0;0;0;46;0;0.0
+Como;Venezia;Nicolás Paz;85;0;0;3;1;0;0;47;0;0.1
+Como;Venezia;Alieu Fadera;5;0;0;0;0;0;0;2;0;0.0
+Como;Venezia;Assane Diao;72;0;0;0;0;0;0;28;0;0.0
+Como;Venezia;Anastasios Douvikas;18;0;0;0;0;1;0;7;0;0.0
+Como;Venezia;Gabriel Strefezza;45;0;0;2;1;0;0;40;0;0.1
+Como;Venezia;Jonathan Ikone;45;1;0;2;2;0;0;16;0;0.3
+Como;Venezia;Lucas Da Cunha;85;0;0;1;1;0;0;49;0;0.1
+Como;Venezia;Yannik Engelhardt;5;0;0;0;0;0;0;4;0;0.0
+Como;Venezia;Máximo Perrone;90;0;0;0;0;0;0;59;0;0.0
+Como;Venezia;Maxence Caqueret;90;0;0;0;0;0;0;46;1;0.0
+Como;Venezia;Álex Valle;90;0;0;1;0;0;0;63;2;0.0
+Como;Venezia;Fellipe Jack;45;0;0;0;0;1;0;34;1;0.0
+Como;Venezia;Alberto Dossena;45;0;0;0;0;0;0;27;2;0.0
+Como;Venezia;Edoardo Goldaniga;90;0;0;1;1;0;0;54;1;0.8
+Como;Venezia;Ivan Smolčić;90;0;0;2;1;0;0;74;1;0.1
+Como;Venezia;Jean Butez;90;0;0;0;0;0;0;50;0;0.0
+Como;Venezia;Mirko Marić;75;0;0;1;0;0;0;26;1;0.2
+Como;Venezia;Christian Gytkjær;15;1;0;1;0;0;0;7;0;0.8
+Como;Venezia;Gaetano Oristanio;62;0;0;1;0;0;0;16;0;0.0
+Como;Venezia;John Yeboah;28;0;0;0;0;1;0;15;0;0.0
+Como;Venezia;Kike Pérez;90;0;0;0;0;0;0;54;1;0.0
+Como;Venezia;Hans Nicolussi Caviglia;90;0;0;0;0;0;0;40;0;0.0
+Como;Venezia;Alfred Duncan;62;0;0;2;1;1;0;20;0;0.0
+Como;Venezia;Issa Doumbia;28;0;0;1;0;0;0;17;0;0.1
+Como;Venezia;Mikael Ellertsson;62;0;0;0;0;0;0;18;2;0.0
+Como;Venezia;Bjarki Bjarkason;28;0;0;0;0;0;0;17;0;0.0
+Como;Venezia;Alessio Zerbin;75;0;0;1;1;1;0;39;0;0.1
+Como;Venezia;Franco Carboni;15;0;0;0;0;0;0;11;0;0.0
+Como;Venezia;Fali Candé;90;0;0;1;1;0;0;67;2;0.0
+Como;Venezia;Jay Idzes;90;0;0;1;0;0;0;60;2;0.1
+Como;Venezia;Joël Schingtienne;90;0;0;0;0;0;0;53;3;0.0
+Como;Venezia;Ionuț Radu;90;0;0;0;0;0;0;49;0;0.0
+Lecce;Milan;Nikola Krstović;90;2;0;5;2;1;0;39;0;0.5
+Lecce;Milan;Tete Morente;81;0;0;1;0;0;0;26;0;0.0
+Lecce;Milan;Ante Rebić;9;0;0;0;0;0;0;9;0;0.0
+Lecce;Milan;Santiago Pierotti;73;0;0;2;0;0;0;30;0;0.2
+Lecce;Milan;Danilo Veiga;17;0;0;0;0;0;0;6;0;0.0
+Lecce;Milan;Þórir Jóhann Helgason;73;0;1;1;1;0;0;25;0;0.1
+Lecce;Milan;Ylber Ramadani;17;0;0;1;0;0;0;7;0;0.1
+Lecce;Milan;Medon Berisha;55;0;0;0;0;1;0;13;0;0.0
+Lecce;Milan;Balthazar Pierret;35;0;0;0;0;0;0;22;0;0.0
+Lecce;Milan;Lassana Coulibaly;81;0;0;0;0;0;0;22;2;0.0
+Lecce;Milan;Lameck Banda;9;0;0;0;0;0;0;4;0;0.0
+Lecce;Milan;Antonino Gallo;90;0;0;0;0;0;0;41;1;0.0
+Lecce;Milan;Gaby Jean;90;0;0;0;0;0;0;40;1;0.0
+Lecce;Milan;Federico Baschirotto;90;0;0;0;0;0;0;27;0;0.0
+Lecce;Milan;Frederic Guilbert;90;0;1;1;0;0;0;42;1;0.0
+Lecce;Milan;Wladimiro Falcone;90;0;0;0;0;0;0;30;0;0.0
+Lecce;Milan;Santiago Giménez;61;0;0;5;3;0;0;28;1;0.9
+Lecce;Milan;Tammy Abraham;29;0;0;1;0;1;0;12;1;0.0
+Lecce;Milan;Christian Pulisic;90;2;0;2;2;0;0;63;1;1.6
+Lecce;Milan;Alejandro Jiménez;45;0;0;0;0;0;0;21;1;0.0
+Lecce;Milan;Rafael Leão;45;0;1;1;1;0;0;31;0;0.0
+Lecce;Milan;Tijjani Reijnders;90;0;0;0;0;0;0;73;2;0.0
+Lecce;Milan;Yunus Musah;74;0;0;2;1;0;0;46;0;0.6
+Lecce;Milan;Riccardo Sottil;16;0;0;0;0;0;0;10;0;0.0
+Lecce;Milan;Warren Bondo;61;0;0;1;1;0;0;49;1;0.0
+Lecce;Milan;João Félix;29;0;0;2;0;0;0;20;0;0.4
+Lecce;Milan;Theo Hernández;90;0;0;0;0;0;0;87;1;0.0
+Lecce;Milan;Malick Thiaw;90;0;0;1;0;0;0;89;1;0.1
+Lecce;Milan;Matteo Gabbia;90;0;0;0;0;0;0;73;0;0.0
+Lecce;Milan;Kyle Walker;73;0;0;0;0;0;0;68;2;0.0
+Lecce;Milan;Youssouf Fofana;17;0;0;0;0;0;0;16;1;0.0
+Lecce;Milan;Marco Sportiello;90;0;0;0;0;0;0;43;0;0.0
+Inter;Monza;Marko Arnautović;69;1;0;2;2;0;0;23;0;0.5
+Inter;Monza;Marcus Thuram;21;0;0;3;0;0;0;7;0;0.6
+Inter;Monza;Lautaro Martínez;90;0;0;6;1;0;0;41;0;0.7
+Inter;Monza;Henrikh Mkhitaryan;69;0;0;1;0;0;0;77;1;0.0
+Inter;Monza;Piotr Zieliński;3;0;0;0;0;0;0;2;0;0.0
+Inter;Monza;Joaquín Correa;18;0;0;0;0;0;0;26;0;0.0
+Inter;Monza;Hakan Çalhanoğlu;90;1;0;6;2;0;0;105;1;0.2
+Inter;Monza;Nicolò Barella;90;0;0;4;1;0;0;101;1;0.1
+Inter;Monza;Alessandro Bastoni;90;0;0;2;0;0;0;87;1;0.1
+Inter;Monza;Denzel Dumfries;90;0;1;3;2;0;0;48;0;0.2
+Inter;Monza;Francesco Acerbi;90;0;0;0;0;0;0;80;0;0.0
+Inter;Monza;Stefan de Vrij;45;0;0;0;0;0;0;34;0;0.0
+Inter;Monza;Carlos Augusto;45;0;0;0;0;0;0;27;0;0.0
+Inter;Monza;Benjamin Pavard;45;0;0;0;0;0;0;52;0;0.0
+Inter;Monza;Yann Aurel Bisseck;45;0;1;3;1;0;0;41;1;0.1
+Inter;Monza;Josep Martinez;90;0;0;0;0;0;0;26;0;0.0
+Inter;Monza;Dany Mota;65;0;2;0;0;0;0;25;0;0.0
+Inter;Monza;Silvère Ganvoula M'Boussy;25;0;0;0;0;0;0;10;1;0.0
+Inter;Monza;Keita Baldé;76;1;0;3;1;0;0;23;0;0.1
+Inter;Monza;Gianluca Caprari;14;0;0;0;0;0;0;4;0;0.0
+Inter;Monza;Kevin Zeroli;90;0;0;0;0;0;0;23;2;0.0
+Inter;Monza;Alessandro Bianco;90;0;0;2;1;0;0;58;3;0.1
+Inter;Monza;Gaetano Castrovilli;66;0;0;0;0;0;0;31;2;0.0
+Inter;Monza;Stefan Lekovic;24;0;0;1;0;0;0;14;0;0.0
+Inter;Monza;Giorgos Kyriakopoulos;90;0;0;0;0;0;0;30;0;0.0
+Inter;Monza;Samuele Birindelli;85;1;0;2;2;0;0;29;0;0.5
+Inter;Monza;Samuele Vignato;5;0;0;0;0;0;0;0;0;0.0
+Inter;Monza;Danilo D'Ambrosio;90;0;0;0;0;0;0;63;3;0.0
+Inter;Monza;Armando Izzo;86;0;0;0;0;1;0;41;0;0.0
+Inter;Monza;Arvid Brorsson;4;0;0;0;0;0;0;6;1;0.0
+Inter;Monza;Pedro Pereira;90;0;0;0;0;0;0;25;0;0.0
+Inter;Monza;Stefano Turati;90;0;0;0;0;0;0;55;0;0.0
+Hellas Verona;Bologna;Amin Sarr;75;0;0;2;0;0;0;25;1;0.1
+Hellas Verona;Bologna;Daniel Mosquera;15;1;0;2;2;0;0;7;0;0.9
+Hellas Verona;Bologna;Tomáš Suslov;75;0;0;0;0;1;0;25;1;0.0
+Hellas Verona;Bologna;Grigoris Kastanos;15;0;0;0;0;0;0;5;1;0.0
+Hellas Verona;Bologna;Antoine Bernede;45;0;0;0;0;0;0;14;0;0.0
+Hellas Verona;Bologna;Casper Tengstedt;45;0;0;1;0;0;0;14;1;0.1
+Hellas Verona;Bologna;Ondrej Duda;90;0;0;0;0;0;0;42;1;0.0
+Hellas Verona;Bologna;Cheikh Niasse;84;0;0;0;0;0;0;39;1;0.0
+Hellas Verona;Bologna;Dailon Livramento;6;0;0;0;0;0;0;2;0;0.0
+Hellas Verona;Bologna;Domagoj Bradarić;67;0;0;0;0;0;0;23;1;0.0
+Hellas Verona;Bologna;Darko Lazović;23;0;0;1;0;0;0;7;0;0.0
+Hellas Verona;Bologna;Jackson Tchatchoua;90;0;0;0;0;0;0;32;0;0.0
+Hellas Verona;Bologna;Nicolás Valentini;69;0;0;1;0;2;1;41;2;0.0
+Hellas Verona;Bologna;Diego Coppola;90;0;0;0;0;0;0;58;0;0.0
+Hellas Verona;Bologna;Paweł Dawidowicz;90;0;0;0;0;0;0;50;0;0.0
+Hellas Verona;Bologna;Lorenzo Montipò;90;0;0;0;0;0;0;39;0;0.0
+Hellas Verona;Bologna;Santiago Castro;83;0;0;2;0;0;0;28;0;0.1
+Hellas Verona;Bologna;Thijs Dallinga;7;0;0;1;0;0;0;7;0;0.4
+Hellas Verona;Bologna;Dan Ndoye;90;0;0;1;0;0;0;46;1;0.0
+Hellas Verona;Bologna;Riccardo Orsolini;58;0;0;1;1;0;0;27;0;0.0
+Hellas Verona;Bologna;Nicolò Cambiaghi;32;1;0;1;1;0;0;16;0;0.0
+Hellas Verona;Bologna;Jens Odgaard;67;1;0;3;2;0;0;24;2;0.5
+Hellas Verona;Bologna;Benjamín Domínguez;23;0;1;0;0;0;0;13;0;0.0
+Hellas Verona;Bologna;Nikola Moro;45;0;0;0;0;1;0;33;0;0.0
+Hellas Verona;Bologna;Michel Aebischer;45;0;0;2;1;0;0;43;0;0.1
+Hellas Verona;Bologna;Lewis Ferguson;90;0;0;0;0;0;0;75;1;0.0
+Hellas Verona;Bologna;Juan Miranda;90;0;0;1;1;0;0;106;3;0.1
+Hellas Verona;Bologna;Jhon Lucumí;90;0;0;0;0;0;0;97;0;0.0
+Hellas Verona;Bologna;Sam Beukema;90;0;0;0;0;0;0;101;2;0.0
+Hellas Verona;Bologna;Davide Calabria;90;0;1;0;0;0;0;91;1;0.0
+Hellas Verona;Bologna;Łukasz Skorupski;90;0;0;0;0;0;0;33;0;0.0
+Napoli;Fiorentina;Giacomo Raspadori;86;1;0;6;4;0;0;37;2;1.2
+Napoli;Fiorentina;Giovanni Simeone;4;0;0;1;1;0;0;6;2;0.5
+Napoli;Fiorentina;Romelu Lukaku;90;1;1;1;1;0;0;25;0;0.5
+Napoli;Fiorentina;Scott McTominay;85;0;0;4;2;0;0;36;0;0.1
+Napoli;Fiorentina;Philip Billing;5;0;0;1;0;0;0;4;0;0.0
+Napoli;Fiorentina;Stanislav Lobotka;90;0;0;0;0;0;0;60;1;0.0
+Napoli;Fiorentina;Billy Gilmour;90;0;0;0;0;0;0;70;1;0.0
+Napoli;Fiorentina;Leonardo Spinazzola;89;0;0;1;1;0;0;49;0;0.1
+Napoli;Fiorentina;Juan Jesus;1;0;0;0;0;0;0;2;0;0.0
+Napoli;Fiorentina;Matteo Politano;81;0;0;2;1;0;0;64;1;0.1
+Napoli;Fiorentina;Mathías Olivera;9;0;0;0;0;0;0;8;0;0.0
+Napoli;Fiorentina;Alessandro Buongiorno;90;0;0;1;1;1;0;69;2;0.0
+Napoli;Fiorentina;Amir Rrahmani;90;0;0;1;0;0;0;87;1;0.2
+Napoli;Fiorentina;Giovanni Di Lorenzo;90;0;0;1;0;0;0;85;1;0.0
+Napoli;Fiorentina;Alex Meret;90;0;0;0;0;0;0;31;0;0.0
+Napoli;Fiorentina;Moise Kean;90;0;1;3;0;0;0;21;2;0.3
+Napoli;Fiorentina;Albert Guðmundsson;90;1;0;2;2;1;0;51;0;0.3
+Napoli;Fiorentina;Nicolò Fagioli;90;0;0;1;0;0;0;71;1;0.0
+Napoli;Fiorentina;Danilo Cataldi;81;0;0;0;0;0;0;51;0;0.0
+Napoli;Fiorentina;Lucas Beltrán;9;0;0;0;0;0;0;7;0;0.0
+Napoli;Fiorentina;Cher Ndour;90;0;0;1;0;0;0;45;1;0.0
+Napoli;Fiorentina;Fabiano Parisi;57;0;0;0;0;0;0;35;2;0.0
+Napoli;Fiorentina;Robin Gosens;33;0;0;0;0;0;0;27;3;0.0
+Napoli;Fiorentina;Dodô;90;0;0;0;0;0;0;66;1;0.0
+Napoli;Fiorentina;Luca Ranieri;58;0;0;0;0;0;0;53;1;0.0
+Napoli;Fiorentina;Marin Pongračić;32;0;0;0;0;1;0;43;0;0.0
+Napoli;Fiorentina;Pablo Marí;90;0;0;0;0;0;0;63;0;0.0
+Napoli;Fiorentina;Pietro Comuzzo;73;0;0;0;0;0;0;43;2;0.0
+Napoli;Fiorentina;Matias Moreno;17;0;0;0;0;0;0;14;2;0.0
+Napoli;Fiorentina;David de Gea;90;0;0;0;0;0;0;55;0;0.0
+Empoli;Roma;Sebastiano Esposito;65;0;0;0;0;0;0;20;1;0.0
+Empoli;Roma;Ismael Konate;25;0;0;0;0;0;0;6;1;0.0
+Empoli;Roma;Liberato Cacace;90;0;0;0;0;0;0;58;1;0.0
+Empoli;Roma;Lorenzo Colombo;45;0;0;1;0;0;0;14;1;0.1
+Empoli;Roma;Christian Kouamé;45;0;0;1;0;0;0;18;0;0.0
+Empoli;Roma;Liam Henderson;65;0;0;0;0;0;0;24;0;0.0
+Empoli;Roma;Viktor Kovalenko;25;0;0;0;0;0;0;17;0;0.0
+Empoli;Roma;Alberto Grassi;90;0;0;0;0;0;0;53;1;0.0
+Empoli;Roma;Giuseppe Pezzella;90;0;0;0;0;0;0;59;3;0.0
+Empoli;Roma;Emmanuel Gyasi;90;0;0;0;0;0;0;24;0;0.0
+Empoli;Roma;Saba Goglichidze;85;0;0;0;0;0;0;55;2;0.0
+Empoli;Roma;Thomas Campaniello;5;0;0;0;0;0;0;3;0;0.0
+Empoli;Roma;Luca Marianucci;90;0;0;0;0;0;0;67;1;0.0
+Empoli;Roma;Mattia De Sciglio;45;0;0;1;1;0;0;30;0;0.0
+Empoli;Roma;Junior Sambia;45;0;0;0;0;0;0;20;0;0.0
+Empoli;Roma;Marco Silvestri;90;0;0;0;0;0;0;33;0;0.0
+Empoli;Roma;Eldor Shomurodov;71;0;0;2;1;0;0;44;1;0.6
+Empoli;Roma;Artem Dovbyk;19;0;0;1;1;0;0;11;0;0.1
+Empoli;Roma;Lorenzo Pellegrini;90;0;0;4;1;0;0;68;2;0.4
+Empoli;Roma;Matìas Soulé;80;1;0;2;1;0;0;67;0;0.1
+Empoli;Roma;Tommaso Baldanzi;10;0;0;1;1;0;0;11;0;0.1
+Empoli;Roma;Manu Koné;90;0;0;2;0;0;0;74;2;0.5
+Empoli;Roma;Leandro Paredes;64;0;0;1;1;0;0;99;0;0.0
+Empoli;Roma;Bryan Cristante;26;0;0;0;0;0;0;18;0;0.0
+Empoli;Roma;Anass Salah-Eddine;64;0;1;0;0;0;0;46;0;0.0
+Empoli;Roma;Angeliño;26;0;0;2;1;0;0;21;0;0.0
+Empoli;Roma;Saud Abdulhamid;63;0;0;0;0;0;0;60;1;0.0
+Empoli;Roma;Devyne Rensch;27;0;0;0;0;0;0;17;0;0.0
+Empoli;Roma;Obite N'Dicka;90;0;0;0;0;0;0;83;2;0.0
+Empoli;Roma;Mats Hummels;90;0;0;0;0;0;0;67;0;0.0
+Empoli;Roma;Victor Nelsson;90;0;0;1;0;0;0;61;1;0.0
+Empoli;Roma;Mile Svilar;90;0;0;0;0;0;0;47;0;0.0
+Juventus;Atalanta;Randal Kolo Muani;74;0;0;0;0;0;0;24;0;0.0
+Juventus;Atalanta;Dušan Vlahović;16;0;0;1;1;0;0;11;0;0.0
+Juventus;Atalanta;Nicolás González;52;0;0;0;0;0;0;25;0;0.0
+Juventus;Atalanta;Samuel Mbangula;38;0;0;0;0;0;0;24;0;0.0
+Juventus;Atalanta;Kenan Yıldız;45;0;0;0;0;1;0;25;2;0.0
+Juventus;Atalanta;Teun Koopmeiners;45;0;0;0;0;0;0;24;0;0.0
+Juventus;Atalanta;Weston McKennie;90;0;0;4;1;0;0;63;2;0.7
+Juventus;Atalanta;Manuel Locatelli;90;0;0;0;0;0;0;93;2;0.0
+Juventus;Atalanta;Khéphren Thuram;90;0;0;1;0;0;0;78;1;0.0
+Juventus;Atalanta;Andrea Cambiaso;90;0;0;0;0;0;0;83;1;0.0
+Juventus;Atalanta;Lloyd Kelly;90;0;0;1;0;0;0;79;2;0.0
+Juventus;Atalanta;Federico Gatti;53;0;0;0;0;0;0;39;3;0.0
+Juventus;Atalanta;Pierre Kalulu;37;0;0;0;0;0;0;58;0;0.0
+Juventus;Atalanta;Timothy Weah;53;0;0;1;0;0;0;42;0;0.0
+Juventus;Atalanta;Alberto costa;37;0;0;1;0;0;0;44;0;0.0
+Juventus;Atalanta;Michele Di Gregorio;90;0;0;0;0;0;0;52;0;0.0
+Juventus;Atalanta;Mateo Retegui;60;1;0;1;0;0;0;29;0;1.1
+Juventus;Atalanta;Charles De Ketelaere;30;0;0;1;1;0;0;18;0;0.1
+Juventus;Atalanta;Ademola Lookman;79;1;0;6;4;0;0;43;0;1.1
+Juventus;Atalanta;Lazar Samardzic;11;0;0;0;0;0;0;4;0;0.0
+Juventus;Atalanta;Juan Cuadrado;45;0;0;0;0;0;0;29;1;0.0
+Juventus;Atalanta;Marco Brescianini;45;0;0;1;0;0;0;14;0;0.1
+Juventus;Atalanta;Davide Zappacosta;90;1;0;4;2;0;0;58;4;0.6
+Juventus;Atalanta;Éderson;79;0;0;2;0;0;0;51;1;0.1
+Juventus;Atalanta;Mario Pašalić;11;0;0;0;0;0;0;9;1;0.0
+Juventus;Atalanta;Marten de Roon;90;1;0;2;1;0;0;56;1;0.4
+Juventus;Atalanta;Raoul Bellanova;90;0;0;0;0;0;0;42;0;0.0
+Juventus;Atalanta;Sead Kolašinac;83;0;1;0;0;0;0;40;1;0.0
+Juventus;Atalanta;Rafael Tolói;7;0;0;0;0;0;0;9;1;0.0
+Juventus;Atalanta;Isak Hien;90;0;0;1;0;1;0;38;2;0.2
+Juventus;Atalanta;Berat Djimsiti;90;0;0;0;0;0;0;46;1;0.0
+Juventus;Atalanta;Marco Carnesecchi;90;0;0;0;0;0;0;33;0;0.0
+Lazio;Udinese;Loum Tchaouna;45;0;0;2;1;0;0;10;0;0.1
+Lazio;Udinese;Tijjani Noslin;45;0;0;1;1;0;0;13;1;0.0
+Lazio;Udinese;Mattia Zaccagni;90;0;0;3;1;0;0;41;0;0.4
+Lazio;Udinese;Gustav Isaksen;80;0;0;0;0;0;0;53;2;0.0
+Lazio;Udinese;Patric;10;0;0;0;0;0;0;12;1;0.0
+Lazio;Udinese;Boulaye Dia;64;0;0;0;0;0;0;14;1;0.0
+Lazio;Udinese;Pedro;26;0;0;0;0;0;0;13;0;0.0
+Lazio;Udinese;Matías Vecino;63;0;1;2;0;1;0;42;1;0.0
+Lazio;Udinese;Reda Belahyane;27;0;0;0;0;0;0;9;1;0.0
+Lazio;Udinese;Mattéo Guendouzi;90;0;0;0;0;0;0;68;1;0.0
+Lazio;Udinese;Adam Marušić;90;0;0;1;1;0;0;57;2;0.0
+Lazio;Udinese;Alessio Romagnoli;90;1;0;1;1;0;0;69;0;0.7
+Lazio;Udinese;Mario Gila;90;0;0;0;0;0;0;74;0;0.0
+Lazio;Udinese;Manuel Lazzari;90;0;0;0;0;1;0;62;1;0.0
+Lazio;Udinese;Ivan Provedel;90;0;0;0;0;0;0;38;0;0.0
+Lazio;Udinese;Florian Thauvin;80;1;0;3;3;0;0;35;0;0.7
+Lazio;Udinese;Keinan Davis;10;0;0;0;0;0;0;7;0;0.0
+Lazio;Udinese;Lorenzo Lucca;90;0;1;3;0;0;0;15;0;0.3
+Lazio;Udinese;Jurgen Ekkelenkamp;64;0;0;0;0;0;0;27;1;0.0
+Lazio;Udinese;Martín Payero;26;0;0;1;0;1;0;14;0;0.0
+Lazio;Udinese;Sandi Lovrić;64;0;0;1;0;1;0;32;1;0.0
+Lazio;Udinese;Jordan Zemura;26;0;0;2;1;0;0;19;0;0.1
+Lazio;Udinese;Jesper Karlström;90;0;0;0;0;1;0;66;1;0.0
+Lazio;Udinese;Hassane Kamara;64;0;0;2;0;1;0;50;3;0.0
+Lazio;Udinese;Arthur Atta;26;0;0;3;0;0;0;26;0;0.1
+Lazio;Udinese;Kingsley Ehizibue;88;0;0;0;0;0;0;33;2;0.0
+Lazio;Udinese;Rui Modesto;2;0;0;0;0;0;0;6;0;0.0
+Lazio;Udinese;Oumar Solet;90;0;0;0;0;0;0;86;0;0.0
+Lazio;Udinese;Jaka Bijol;90;0;0;0;0;0;0;82;3;0.0
+Lazio;Udinese;Thomas Kristensen;90;0;0;0;0;0;0;54;0;0.0
+Lazio;Udinese;Maduka Okoye;90;0;0;0;0;0;0;41;0;0.0
+Genoa;Lecce;Andrea Pinamonti;90;0;0;3;0;0;0;38;2;0.1
+Genoa;Lecce;Fabio Miretti;81;2;0;3;2;1;0;38;0;0.9
+Genoa;Lecce;Jean Onana;9;0;0;0;0;0;0;7;0;0.0
+Genoa;Lecce;Alessandro Zanoli;71;0;0;0;0;0;0;32;1;0.0
+Genoa;Lecce;Jeff Ekhator;19;0;0;0;0;0;0;13;1;0.0
+Genoa;Lecce;Ruslan Malinovskyi;55;0;2;1;0;0;0;36;1;0.0
+Genoa;Lecce;Alan Matturro;35;0;0;0;0;0;0;9;1;0.0
+Genoa;Lecce;Morten Frendrup;90;0;0;1;0;0;0;36;0;0.0
+Genoa;Lecce;Patrizio Masini;90;0;0;0;0;0;0;47;1;0.0
+Genoa;Lecce;Aarón Martín;90;0;0;0;0;1;0;51;2;0.0
+Genoa;Lecce;Johan Vásquez;90;0;0;0;0;1;0;51;4;0.0
+Genoa;Lecce;Koni De Winter;90;0;0;0;0;0;0;54;1;0.0
+Genoa;Lecce;Stefano Sabelli;80;0;0;0;0;0;0;50;2;0.0
+Genoa;Lecce;Brooke Norton-Cuffy;10;0;0;0;0;0;0;11;0;0.0
+Genoa;Lecce;Nicola Leali;90;0;0;0;0;0;0;31;0;0.0
+Genoa;Lecce;Nikola Krstović;90;1;0;2;0;1;0;34;1;0.8
+Genoa;Lecce;Tete Morente;45;0;0;1;0;0;0;24;0;0.0
+Genoa;Lecce;Jesper Karlsson;45;0;0;1;1;0;0;20;0;0.0
+Genoa;Lecce;Santiago Pierotti;45;0;0;0;0;0;0;7;1;0.0
+Genoa;Lecce;Konan N'dri;45;0;0;3;0;0;0;16;0;0.2
+Genoa;Lecce;Þórir Jóhann Helgason;81;0;0;1;0;0;0;28;1;0.0
+Genoa;Lecce;Lameck Banda;9;0;0;0;0;0;0;2;0;0.0
+Genoa;Lecce;Medon Berisha;90;0;0;4;0;1;0;78;1;0.2
+Genoa;Lecce;Lassana Coulibaly;56;0;0;0;0;0;0;33;1;0.0
+Genoa;Lecce;Mohamed Kaba;34;0;0;0;0;0;0;29;1;0.0
+Genoa;Lecce;Antonino Gallo;90;0;0;1;0;0;0;68;3;0.0
+Genoa;Lecce;Gaby Jean;90;0;0;0;0;0;0;86;0;0.0
+Genoa;Lecce;Federico Baschirotto;90;0;0;0;0;0;0;67;0;0.0
+Genoa;Lecce;Frederic Guilbert;56;0;0;0;0;0;0;29;0;0.0
+Genoa;Lecce;Danilo Veiga;34;0;0;1;0;0;0;28;1;0.1
+Genoa;Lecce;Wladimiro Falcone;90;0;0;0;0;0;0;37;0;0.0
