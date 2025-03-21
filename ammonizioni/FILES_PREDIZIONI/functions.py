@@ -4,6 +4,7 @@ from fake_useragent import UserAgent
 import time
 import requests
 import pandas as pd
+import re 
 import random
 import time 
 from config import parent_dir , chrome_driver_path
@@ -95,7 +96,7 @@ def calendario(url):
     df = pd.DataFrame(data, columns=columns)
     df.drop_duplicates(inplace=True)
     df = df[df['Risultato'] != '']
-    df.to_csv(parent_dir+r"\data\raw\calendario.csv", index=False, sep=';',header=True)
+    df.to_csv(parent_dir+r"\FILES_PREDIZIONI\data\raw\calendario.csv", index=False, sep=';',header=True)
     print("Calendario salvato con successo!")
 
 def get_table_id(url):
@@ -187,8 +188,8 @@ def stats_match(url):
     return df
 
 def scarica_report_partita():
-    dataset = pd.read_csv(parent_dir + r"\data\processed\dataset.csv",sep=';',header=0)
-    calendario = pd.read_csv(parent_dir + r"\data\raw\calendario.csv",sep=';',header=0)
+    dataset = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\processed\dataset_2.csv",sep=';',header=0)
+    calendario = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\raw\calendario.csv",sep=';',header=0)
     dataset = dataset[["Casa","Trasferta"]].drop_duplicates()
     merged = calendario.merge(dataset, how='left', left_on=["Squadra di Casa", "Squadra Trasferta"], right_on=["Casa", "Trasferta"], indicator=True)
     new_matches = merged[merged['_merge'] == 'left_only'].drop(columns=['Casa', 'Trasferta', '_merge'])
@@ -206,7 +207,7 @@ def scarica_report_partita():
         df_tot = pd.concat([df_tot,df],axis=0)
         tempo = time.time()-now
         print(f"Tempo impiegato per scaricare le statistiche della partita {casa} - {trasferta}: {tempo: .2f} secondi")
-    df_tot.to_csv(parent_dir + r"\data\silver\dataset_silver.csv", sep=';', index=False,header=True)
+    df_tot.to_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\dataset_silver.csv", sep=';', index=False,header=True)
     print("Report partite scaricati con successo!")
     return new_matches
 
@@ -271,13 +272,16 @@ def scarico_stats_giocatori(url):
         aerials_won = row.find('td', {'data-stat': 'aerials_won'}).get_text(strip=True)
         aerials_lost = row.find('td', {'data-stat': 'aerials_lost'}).get_text(strip=True)
         aerials_won_pct = row.find('td', {'data-stat': 'aerials_won_pct'}).get_text(strip=True)
-        data.append([player_name, position, team, age, minutes_played, cards_yellow, cards_red, cards_yellow_red, fouls, fouled, offsides, crosses, interceptions, tackles_won, pens_won, pens_conceded, own_goals, ball_recoveries, aerials_won, aerials_lost, aerials_won_pct])
+        link_giocatore = row.find('td', {'data-stat': 'player'}).find('a').get('href')
+        link_giocatore = 'https://fbref.com' + link_giocatore
+        data.append([player_name, position, team, age, minutes_played, cards_yellow, cards_red, cards_yellow_red, fouls, fouled, offsides, crosses, interceptions, tackles_won, pens_won, pens_conceded, own_goals, ball_recoveries, aerials_won, aerials_lost, aerials_won_pct,link_giocatore])
 
-    columns = ['Giocatore', 'Ruolo', 'Squadra', 'Età', 'Minuti Giocati', 'Cartellini Gialli', 'Cartellini Rossi', 'Cartellini Gialli/Rossi', 'Falli', 'Fallo Subito', 'Fuorigioco', 'Cross', 'Intercettazioni', 'Tackle Vinti', 'Rigori Guadagnati', 'Rigori Concessi', 'Autoreti', 'Recupero Palla', 'Aerei Vinti', 'Aerei Persi', 'Percentuale Aerei Vinti']
+    driver.quit()
+    columns = ['Giocatore', 'Ruolo', 'Squadra', 'Età', 'Minuti Giocati', 'Cartellini Gialli', 'Cartellini Rossi', 'Cartellini Gialli/Rossi', 'Falli', 'Fallo Subito', 'Fuorigioco', 'Cross', 'Intercettazioni', 'Tackle Vinti', 'Rigori Guadagnati', 'Rigori Concessi', 'Autoreti', 'Recupero Palla', 'Aerei Vinti', 'Aerei Persi', 'Percentuale Aerei Vinti',"Link Giocatore"]
     df = pd.DataFrame(data, columns=columns)
     df.drop_duplicates(inplace=True)
     df = converti_in_float(df)
-    df.to_csv(parent_dir+r"\data\raw\statistiche_varie_giocatori.csv", index=False, sep=';',header=True)   
+    df.to_csv(parent_dir+r"\FILES_PREDIZIONI\data\raw\statistiche_varie_giocatori.csv", index=False, sep=';',header=True)   
     print("Statistiche giocatori aggiornate")   
     
 def scarico_stats_difensive_squadre(url):
@@ -309,6 +313,101 @@ def scarico_stats_difensive_squadre(url):
     df = pd.DataFrame(data, columns=columns)
     df.drop_duplicates(inplace=True)
     df = converti_in_float(df)
-    df.to_csv(parent_dir+r"\data\raw\statistiche_squadre_difensive.csv", index=False, sep=';',header=True)
+    df.to_csv(parent_dir+r"\FILES_PREDIZIONI\data\raw\statistiche_squadre_difensive.csv", index=False, sep=';',header=True)
     print("Statistiche difensive squadre aggiornate")
 
+def scarico_ruoli():
+    def scarica_ruolo(url):
+        response = get_my_ip(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        paragrafi = soup.find_all('p')
+        for p in paragrafi:
+            if 'Posizione:' in p.text:
+                # Estrai solo il ruolo ignorando altre informazioni
+                ruolo = re.search(r'Posizione:\s*([^\n▪]*)', p.text)
+                if ruolo:
+                    return ruolo.group(1).strip()  # Ritorna solo il ruolo trovato
+
+        return None
+
+    giocatori = pd.read_csv(parent_dir+r"\FILES_PREDIZIONI\data\raw\statistiche_varie_giocatori.csv",sep=';',header=0)
+    posizioni = pd.DataFrame(columns=["Giocatore", "Posizione"])
+    for i, row in giocatori.iterrows():
+        giocatore=row["Giocatore"]
+        url = row["Link Giocatore"]
+        pos = scarica_ruolo(url)
+        giocatori.at[i, "Posizione"] = pos
+        posizioni = pd.concat([posizioni, pd.DataFrame({"Giocatore": [giocatore], "Posizione": [pos]})])
+        if i % 50 == 0:
+            print(f"Scaricato {i} giocatori")
+            posizioni.to_csv(parent_dir +"\data\raw\posizioni.csv",sep=';',index=False)
+            print(f"{i}/{len(giocatori)} -- Salvato il file")
+
+
+def associa_avversari():
+    dataset = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\processed\dataset_2.csv",sep=';',header = 0 )
+    giocatori = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\statistiche_giocatori.csv",sep=';',header = 0 )
+    dataset = pd.merge(dataset,giocatori[["Giocatore","Squadra_giocatore"]],how='left',left_on=['Giocatore'],right_on=['Giocatore'])
+
+    # Mappatura dei ruoli
+    role_mapping = {
+    "Att": ["Dif"], 
+    "Att.Cen": ["Dif", "Cen.Dif"], 
+    "Att.Dif": ["Dif.Att","Dif.Cen","Dif"],
+    "Cen": ["Cen.Att","Cen"], 
+    "Cen.Att": ["Cen.Dif","Dif.Att","Cen"], 
+    "Cen.Dif": ["Cen.Att","Cen"],
+    "Dif": ["Att","Att.Cen"], 
+    "Dif.Att": ["Att.Dif","Cen.Dif","Dif.Att","Att.Cen","Att"], 
+    "Dif.Cen": ["Cen.Att","Att"],
+    "Por": None  # Nessun avversario per il portiere
+    }
+    # Colonne da copiare per gli avversari
+    stat_columns = ["Falli_per90", "Fallo Subito_per90", "Intercettazioni_per90", "Tackle Vinti_per90", "Recupero Palla_per90", "Aerei Vinti_per90", "Aerei Persi_per90"]
+
+    def get_top_3_players(row):
+        if pd.isna(row['Ruolo']) or row['Ruolo'] == "Por":
+            return pd.Series([None] * (3 + len(stat_columns) * 3))
+
+        # Determinare la squadra avversaria
+        if row['Squadra_giocatore'] == row['Casa']:
+            squadra_avversaria = row['Trasferta']
+        else:
+            squadra_avversaria = row['Casa']
+
+        ruolo_avversario = role_mapping.get(row['Ruolo'])
+        if not ruolo_avversario:
+            return pd.Series([None] * (3 + len(stat_columns) * 3))
+
+        # Filtrare i giocatori della squadra avversaria con il ruolo corrispondente
+        giocatori_avversari = giocatori[(giocatori['Squadra_giocatore'] == squadra_avversaria) & (giocatori['Ruolo'].isin(ruolo_avversario))]
+
+        # Controllare se ci sono abbastanza giocatori
+        if giocatori_avversari.empty:
+            return pd.Series([None] * (3 + len(stat_columns) * 3))
+
+        # Ordinare per minuti giocati e selezionare i primi tre
+        top_giocatori = giocatori_avversari.sort_values(by='Minuti Giocati', ascending=False).head(3)
+
+        # Assicurarsi che ci siano sempre tre valori restituiti
+        top_giocatori_list = top_giocatori['Giocatore'].tolist()
+        while len(top_giocatori_list) < 3:
+            top_giocatori_list.append(None)
+
+        # Ottenere le statistiche associate
+        stats_values = []
+        for i in range(3):
+            if i < len(top_giocatori):
+                stats_values.extend(top_giocatori.iloc[i][stat_columns].values)
+            else:
+                stats_values.extend([None] * len(stat_columns))
+
+        return pd.Series(top_giocatori_list + stats_values)
+
+    # Applicare la funzione al dataset
+    new_columns = ['Avversario_1', 'Avversario_2', 'Avversario_3']
+    for i in range(1, 4):
+        new_columns.extend([col + f"_avv{i}" for col in stat_columns])
+
+    dataset[new_columns] = dataset.apply(get_top_3_players, axis=1)
+    dataset.to_csv(parent_dir + r"\FILES_PREDIZIONI\data\processed\dataset_2.csv", sep=';', index=False)

@@ -1,10 +1,11 @@
 import pandas as pd
 import os
+from config import parent_dir
 
 
 def stats_giocatori_to_silver(parent_dir):
-    giocatori_raw = pd.read_csv(parent_dir + r"\data\raw\statistiche_varie_giocatori.csv",sep=";",header=0)
-    giocartori_silver = pd.read_csv(parent_dir + r"\data\silver\statistiche_giocatori.csv",sep=";",header=0)
+    giocatori_raw = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\raw\statistiche_varie_giocatori.csv",sep=";",header=0)
+    giocartori_silver = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\statistiche_giocatori.csv",sep=";",header=0)
     giocatori_raw["Squadra_giocatore"] = giocatori_raw["Squadra"]
     giocatori_raw["Cartellini Gialli_per90"] = giocatori_raw["Cartellini Gialli"] / giocatori_raw["Minuti Giocati"]
     giocatori_raw["Cartellini Rossi_per90"] = giocatori_raw["Cartellini Rossi"] / giocatori_raw["Minuti Giocati"]
@@ -21,10 +22,10 @@ def stats_giocatori_to_silver(parent_dir):
     # Rimuovo duplicati col min(Minuti Giocati)
     giocatori_raw = giocatori_raw.loc[giocatori_raw.groupby('Giocatore')['Minuti Giocati'].idxmax()]
     giocatori_raw.reset_index(drop=True, inplace=True)  
-    giocatori_raw.to_csv(parent_dir+r"\data\silver\statistiche_giocatori.csv",sep=";",index=False)
+    giocatori_raw.to_csv(parent_dir+r"\FILES_PREDIZIONI\data\silver\statistiche_giocatori.csv",sep=";",index=False)
 
 def stats_squadre_to_silver(parent_dir):
-    df_squadre = pd.read_csv(parent_dir + r"\data\raw\statistiche_squadre_difensive.csv",sep=";",header=0)
+    df_squadre = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\raw\statistiche_squadre_difensive.csv",sep=";",header=0)
     df_squadre["Tackle_per90"]=df_squadre["Tackle"]/df_squadre["Partite Giocate"]
     df_squadre["Tackle Vinti_per90"]=df_squadre["Tackle Vinti"]/df_squadre["Partite Giocate"]
     df_squadre["Tackle Difensivi Terzo_per90"]=df_squadre["Tackle Difensivi Terzo"]/df_squadre["Partite Giocate"]
@@ -39,13 +40,13 @@ def stats_squadre_to_silver(parent_dir):
     df_squadre["Errori_per90"]=df_squadre["Errori"]/df_squadre["Partite Giocate"]
 
     df_squadre = df_squadre[["Squadra","Tackle_per90","Tackle Vinti_per90","Tackle Difensivi Terzo_per90","Tackle Centrocampo Terzo_per90","Tackle Attacco Terzo_per90","Tackle Sfida_per90","Sfide_per90","Sfide Perse_per90","Blocchi_per90","Intercettazioni_per90","Disimpegni_per90","Errori_per90"]]
-    df_squadre.to_csv(parent_dir + r"\data\silver\statistiche_squadre.csv",sep=";",index=False)
+    df_squadre.to_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\statistiche_squadre.csv",sep=";",index=False)
 
 def dataset_to_gold(parent_dir):
-    dataset_silver = pd.read_csv(parent_dir + r"\data\silver\dataset_silver.csv",sep=";",header=0)
-    giocatori_silver = pd.read_csv(parent_dir + r"\data\silver\statistiche_giocatori.csv",sep=";",header=0)
-    squadre_silver = pd.read_csv(parent_dir + r"\data\silver\statistiche_squadre.csv",sep=";",header=0)
-    calendario = pd.read_csv(parent_dir + r"\data\raw\calendario.csv",sep=";",header=0)
+    dataset_silver = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\dataset_silver.csv",sep=";",header=0)
+    giocatori_silver = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\statistiche_giocatori.csv",sep=";",header=0)
+    squadre_silver = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\statistiche_squadre.csv",sep=";",header=0)
+    calendario = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\raw\calendario.csv",sep=";",header=0)
 
     dataset_silver = dataset_silver[["Casa","Trasferta","Giocatore","Cartellini Gialli","Cartellini Rossi"]]
     giocatori_silver = giocatori_silver[["Giocatore","Ruolo",'Cartellini Gialli_per90',
@@ -65,7 +66,7 @@ def dataset_to_gold(parent_dir):
     cols.insert(2, cols.pop(cols.index('Arbitro')))
     dataset_silver = dataset_silver[cols]
 
-    dataset_gold = pd.read_csv(parent_dir + r"\data\processed\dataset.csv",sep=";",header=0)
+    dataset_gold = pd.read_csv(parent_dir + r"\FILES_PREDIZIONI\data\processed\dataset_2.csv",sep=";",header=0)
     dataset_gold = dataset_gold[['Casa', 'Trasferta', 'Arbitro', 'Giocatore', 'Cartellini Gialli',"Cartellini Rossi"]]
     dataset_gold = dataset_gold.merge(giocatori_silver, left_on="Giocatore", right_on="Giocatore", how="left")
     dataset_gold = dataset_gold.merge(squadre_casa, left_on="Casa", right_on="Squadra_Casa", how="left")
@@ -86,8 +87,9 @@ def dataset_to_gold(parent_dir):
     arbitri_combined.fillna(0,inplace=True)
     arbitri_combined.rename(columns={"Partita":"Partite Arbitrate"},inplace=True)
     arbitri_combined["Media Cartellini a partita"] = arbitri_combined["Cartellini"] / arbitri_combined["Partite Arbitrate"]
-    arbitri_combined.to_csv(parent_dir + r"\data\silver\arbitri.csv",sep=";",index=False)
+    arbitri_combined.to_csv(parent_dir + r"\FILES_PREDIZIONI\data\silver\arbitri.csv",sep=";",index=False)
     arbitri_combined.drop(columns=["Cartellini","Partite Arbitrate"],inplace=True)
     dataset_combined = dataset_combined.merge(arbitri_combined, left_on="Arbitro", right_on="Arbitro", how="left")
 
-    dataset_combined.to_csv(parent_dir + r"\data\processed\dataset.csv",sep=";",index=False)
+    dataset_combined.drop_duplicates(inplace=True)
+    dataset_combined.to_csv(parent_dir + r"\FILES_PREDIZIONI\data\processed\dataset_2.csv",sep=";",index=False)

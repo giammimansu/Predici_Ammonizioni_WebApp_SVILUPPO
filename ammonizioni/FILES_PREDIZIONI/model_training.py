@@ -12,13 +12,13 @@ parent_dir = os.path.dirname(os.path.dirname(current_dir))
 
 def train_model():
     # Step 1: Load the Data
-    data = pd.read_csv(parent_dir + r"\ml-model-project\data\processed\dataset.csv", sep=';', header=0)
+    data = pd.read_csv(parent_dir + r"\ammonizioni\FILES_PREDIZIONI\data\processed\dataset_2.csv", sep=';', header=0)
     
     # Step 2: Data Cleaning
     data.dropna(inplace=True)  # Handle missing values
     
     # Step 3: Feature Selection
-    X = data.drop(columns=['Cartellini Gialli', 'Cartellini Rossi'])
+    X = data.drop(columns=['Cartellini Gialli', 'Cartellini Rossi',"Squadra_giocatore",'Avversario_1', 'Avversario_2', 'Avversario_3'])
     y = data["Cartellini Gialli"]
     
     # Step 4: Encode Categorical Features
@@ -64,6 +64,8 @@ def train_model():
     print("ROC AUC Score:", roc_auc_score(y_test, y_pred_proba, multi_class='ovr'))
     
     # Save the model, encoder, and scaler
-    joblib.dump(best_model, parent_dir + r"\ml-model-project\models\best_model.pkl")
-    joblib.dump(encoder, parent_dir + r'\ml-model-project\models\encoder.pkl')
-    joblib.dump(scaler, parent_dir + r'\ml-model-project\models\scaler.pkl')
+    joblib.dump(best_model, parent_dir + r"\ammonizioni\FILES_PREDIZIONI\models\best_model.pkl")
+    joblib.dump(encoder, parent_dir + r'\ammonizioni\FILES_PREDIZIONI\models\encoder.pkl')
+    joblib.dump(scaler, parent_dir + r'\ammonizioni\FILES_PREDIZIONI\models\scaler.pkl')
+
+

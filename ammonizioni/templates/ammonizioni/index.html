@@ -54,21 +54,12 @@
                 {% endfor %}
             </select>
 
-            <button type="submit" id="predict">Predict</button>
+            <button type="submit" id="avanti">Avanti</button>
         </form>
         
         <div id="result">
             {% if error_message %}
                 <div class="error">{{ error_message }}</div>
-            {% endif %}
-            {% if results %}
-                <h2>Prediction Results</h2>
-                <ul>
-                    {% for giocatore, probability in results %}
-                        <li>{{ giocatore }}: {{ probability }}%</li>
-                    {% endfor %}
-                </ul>
-                <button onclick="window.location.href='/'">Nuova Predizione</button>
             {% endif %}
         </div>
     </div>
