@@ -116,7 +116,7 @@ def interazioni(request):
 
         # Processa le interazioni e fai le previsioni
         try:
-            input_data = crea_df_input(parent_dir, casa, trasferta, arbitro, lista_giocatori, avversari_liste)
+            input_data = crea_df_input(files_predizioni_dir, casa, trasferta, arbitro, lista_giocatori, avversari_liste)
             try:
                 input_data = input_data.drop(columns=['Squadra_giocatore', 'Avversario_1', 'Avversario_2', 'Avversario_3'])
             except Exception as e:
@@ -136,13 +136,13 @@ def interazioni(request):
             # Arrotonda results al secondo decimale
             results = [(giocatore, round(prob, 2)) for giocatore, prob in results]
             context = {
-                'casa': casa,
-                'trasferta': trasferta,
-                'arbitro': arbitro,
-                'giocatori_casa': sorted(giocatori_casa, key=lambda x: x['Ruolo']),
-                'giocatori_trasferta': sorted(giocatori_trasferta, key=lambda x: x['Ruolo']),
-                'results': results  # Aggiungi results al contesto
-            }
+                    'casa': casa,
+                    'trasferta': trasferta,
+                    'arbitro': arbitro,
+                    'giocatori_casa': giocatori_casa,  # No sorting by 'Ruolo' since it's a list of strings
+                    'giocatori_trasferta': giocatori_trasferta,  # No sorting by 'Ruolo' since it's a list of strings
+                    'results': results  # Add results to the context
+                }
             return render(request, 'ammonizioni/interazioni.html', context)
         except ValueError as e:
             error_message = str(e)

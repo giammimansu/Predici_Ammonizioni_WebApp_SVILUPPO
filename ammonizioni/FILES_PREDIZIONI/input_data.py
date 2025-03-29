@@ -2,10 +2,10 @@ import pandas as pd
 import sys
 
 def crea_df_input(parent_dir, casa, trasferta, arbitro, lista_giocatori, avversari):
-    dataset = pd.read_csv(parent_dir + r"\ammonizioni\FILES_PREDIZIONI\data\processed\dataset_2.csv", sep=';', header=0)
-    giocatori = pd.read_csv(parent_dir + r"\ammonizioni\FILES_PREDIZIONI\data\silver\statistiche_giocatori.csv", sep=';', header=0)
-    squadre = pd.read_csv(parent_dir + r"\ammonizioni\FILES_PREDIZIONI\data\silver\statistiche_squadre.csv", sep=';', header=0)
-    arbitri = pd.read_csv(parent_dir + r"\ammonizioni\FILES_PREDIZIONI\data\silver\arbitri.csv", sep=';', header=0)
+    dataset = pd.read_csv(parent_dir + r"\data\processed\dataset_2.csv", sep=';', header=0)
+    giocatori = pd.read_csv(parent_dir + r"\data\silver\statistiche_giocatori.csv", sep=';', header=0)
+    squadre = pd.read_csv(parent_dir + r"\data\silver\statistiche_squadre.csv", sep=';', header=0)
+    arbitri = pd.read_csv(parent_dir + r"\data\silver\arbitri.csv", sep=';', header=0)
 
     squadra_casa = squadre[squadre["Squadra"] == casa]
     squadra_trasferta = squadre[squadre["Squadra"] == trasferta]
