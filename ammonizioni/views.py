@@ -27,12 +27,14 @@ def index(request):
         giocatori_casa = request.POST.getlist('giocatori_casa')
         giocatori_trasferta = request.POST.getlist('giocatori_trasferta')
 
+        # Verifica che siano selezionati almeno 3 giocatori per ogni squadra
         if not casa or not trasferta:
             error_message = "Devi selezionare entrambe le squadre."
         elif not arbitro:
             error_message = "Devi selezionare un arbitro."
-        elif not giocatori_casa and not giocatori_trasferta:
-            error_message = "Devi selezionare almeno un giocatore."
+        elif len(giocatori_casa) < 3 or len(giocatori_trasferta) < 3:
+            error_message = "Devi selezionare almeno 3 giocatori ogni squadra."
+        
         else:
             # Redirect to the second page with the selected data
             request.session['casa'] = casa
@@ -48,8 +50,9 @@ def index(request):
         squadre_df = pd.read_csv(os.path.join(files_predizioni_dir, 'data', 'silver', 'statistiche_squadre.csv'), sep=';')
         giocatori_df = pd.read_csv(os.path.join(files_predizioni_dir, 'data', 'silver', 'statistiche_giocatori.csv'), sep=';')
 
-        # Set up player roles and sorting
-        ordine_ruoli = ['Por', 'Dif', 'Dif.Cen', 'Dif.Att', 'Cen.Dif', 'Cen', 'Cen.Att', 'Att.Dif', 'Att', 'Att.Cen']
+        # Escludi i giocatori con ruolo "Por" e ordina per ruolo
+        ordine_ruoli = ['Dif', 'Dif.Cen', 'Dif.Att', 'Cen.Dif', 'Cen', 'Cen.Att', 'Att.Dif', 'Att', 'Att.Cen']
+        giocatori_df = giocatori_df[~giocatori_df['Ruolo'].str.contains('Por', na=False)]
         giocatori_df['Ruolo'] = pd.Categorical(giocatori_df['Ruolo'], categories=ordine_ruoli, ordered=True)
         giocatori_df = giocatori_df.sort_values(by='Ruolo')
 
@@ -63,8 +66,8 @@ def index(request):
     giocatori_trasferta = []
 
     if casa and trasferta:
-        giocatori_casa = giocatori_df[giocatori_df['Squadra_giocatore'] == casa]['Giocatore'].tolist()
-        giocatori_trasferta = giocatori_df[giocatori_df['Squadra_giocatore'] == trasferta]['Giocatore'].tolist()
+        giocatori_casa = giocatori_df[giocatori_df['Squadra_giocatore'] == casa].sort_values(by='Ruolo')['Giocatore'].tolist()
+        giocatori_trasferta = giocatori_df[giocatori_df['Squadra_giocatore'] == trasferta].sort_values(by='Ruolo')['Giocatore'].tolist()
 
     context = {
         'squadre': squadre,
@@ -130,14 +133,14 @@ def interazioni(request):
                 results.append((row['Giocatore'], probability[0] * 100))
 
             results.sort(key=lambda x: x[1], reverse=True)
-            #arrotondo results al secondo decimale
+            # Arrotonda results al secondo decimale
             results = [(giocatore, round(prob, 2)) for giocatore, prob in results]
             context = {
                 'casa': casa,
                 'trasferta': trasferta,
                 'arbitro': arbitro,
-                'giocatori_casa': giocatori_casa,
-                'giocatori_trasferta': giocatori_trasferta,
+                'giocatori_casa': sorted(giocatori_casa, key=lambda x: x['Ruolo']),
+                'giocatori_trasferta': sorted(giocatori_trasferta, key=lambda x: x['Ruolo']),
                 'results': results  # Aggiungi results al contesto
             }
             return render(request, 'ammonizioni/interazioni.html', context)
@@ -180,6 +183,10 @@ def get_players(request):
 
     try:
         giocatori_df = pd.read_csv(os.path.join(files_predizioni_dir, 'data', 'silver', 'statistiche_giocatori.csv'), sep=';')
+        ordine_ruoli = ['Por', 'Dif', 'Dif.Cen', 'Dif.Att', 'Cen.Dif', 'Cen', 'Cen.Att', 'Att.Dif', 'Att', 'Att.Cen']
+        giocatori_df['Ruolo'] = pd.Categorical(giocatori_df['Ruolo'], categories=ordine_ruoli, ordered=True)
+        giocatori_df = giocatori_df.sort_values(by='Ruolo')
+        giocatori_df=giocatori_df[giocatori_df['Ruolo'] != 'Por']
 
         giocatori_casa = giocatori_df[giocatori_df['Squadra_giocatore'] == casa]['Giocatore'].tolist() if casa else []
         giocatori_trasferta = giocatori_df[giocatori_df['Squadra_giocatore'] == trasferta]['Giocatore'].tolist() if trasferta else []
