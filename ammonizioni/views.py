@@ -116,7 +116,7 @@ def interazioni(request):
 
         # Processa le interazioni e fai le previsioni
         try:
-            input_data = crea_df_input(files_predizioni_dir, casa, trasferta, arbitro, lista_giocatori, avversari_liste)
+            input_data = crea_df_input(parent_dir, casa, trasferta, arbitro, lista_giocatori, avversari_liste)
             try:
                 input_data = input_data.drop(columns=['Squadra_giocatore', 'Avversario_1', 'Avversario_2', 'Avversario_3'])
             except Exception as e:

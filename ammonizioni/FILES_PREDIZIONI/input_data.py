@@ -1,11 +1,18 @@
 import pandas as pd
 import sys
+import os
 
 def crea_df_input(parent_dir, casa, trasferta, arbitro, lista_giocatori, avversari):
-    dataset = pd.read_csv(parent_dir + r"\data\processed\dataset_2.csv", sep=';', header=0)
-    giocatori = pd.read_csv(parent_dir + r"\data\silver\statistiche_giocatori.csv", sep=';', header=0)
-    squadre = pd.read_csv(parent_dir + r"\data\silver\statistiche_squadre.csv", sep=';', header=0)
-    arbitri = pd.read_csv(parent_dir + r"\data\silver\arbitri.csv", sep=';', header=0)
+    dataset_path = os.path.join(parent_dir, 'ammonizioni','FILES_PREDIZIONI', 'data', 'processed', 'dataset_2.csv')
+    giocatori_path = os.path.join(parent_dir,'ammonizioni', 'FILES_PREDIZIONI', 'data', 'silver', 'statistiche_giocatori.csv')
+    squadre_path = os.path.join(parent_dir,'ammonizioni', 'FILES_PREDIZIONI', 'data', 'silver', 'statistiche_squadre.csv')
+    arbitri_path = os.path.join(parent_dir,'ammonizioni', 'FILES_PREDIZIONI', 'data', 'silver', 'arbitri.csv')
+
+
+    dataset = pd.read_csv(dataset_path, sep=';', header=0)
+    giocatori = pd.read_csv(giocatori_path, sep=';', header=0)
+    squadre = pd.read_csv(squadre_path, sep=';', header=0)
+    arbitri = pd.read_csv(arbitri_path, sep=';', header=0)
 
     squadra_casa = squadre[squadre["Squadra"] == casa]
     squadra_trasferta = squadre[squadre["Squadra"] == trasferta]
